@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    background-color: #333333;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 1.2fr 1.2fr;
+    grid-auto-rows: 1fr;
+    gap: 30px 10%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header about"
+      "fig1 fig2 fig3"
+      "fig4 fig5 fig6";
+    background-color: #f2f2f2;
+    width: 900px;
+    height: 960px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .header { grid-area: header;
+    margin: 25px; 
+    }
+  
+  .about { grid-area: about;
+    margin: 25px; 
+    width: 250px;
+    margin-left: -100px;;
+    }
+  .about h4 {
+      text-transform: uppercase;
+      padding: 10px;
+  }
+  
+  .fig1 { grid-area: fig1;
+    margin-left: 20px;
+    margin-top: -45px;
+  }
+  
+  .fig2 { grid-area: fig2; }
+  
+  .fig3 { grid-area: fig3;
+    margin-top: -45px;
+   }
+  
+  .fig4 { grid-area: fig4;
+    margin-left: 20px;
+    margin-top: -45px;
+    }
+  
+  .fig5 { grid-area: fig5; }
+  
+  .fig6 { grid-area: fig6;
+    margin-top: -45px;
+    }
+  figcaption {
+        color: blue;
+    }
+
+  .copyright {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.6fr 1fr 1.5fr 1.5fr 1.5fr;
+        grid-auto-rows: 1fr;
+        gap: 15px 5%;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "header header"
+          "about about"
+          "fig1 fig2"
+          "fig3 fig4"
+          "fig5 fig6";
+        width: 400px; 
+      }
+    .header {
+      display: flex;
+      justify-content: center;
+    }
+    .about {
+      position: absolute;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      margin-left: 4rem;
+      margin-top: 5rem;
+      width: 60%;
+    }
+    .about h4 {
+      margin-left: 70px;
+    }
+    img {
+      width: 140px;
+      height: 180px;
+      
+
+    }
+    .fig1 {
+      margin-top: -30px;
+
+    }
+    .fig2 {
+      margin-left: 30px;
+    }
+    .fig3{
+      margin-left: 20px;
+    }
+    .fig5 {
+      margin-left: 20px;
+      margin-top: -40px;
+    }
+    .fig4 {
+      margin-top: -10px;
+      margin-left: 30px;
+    }
+    .fig6 {
+      margin-top: 5px;
+      margin-left: 30px;
+    }
+
+    }
+      
+      
+
+  
+      
+  
+  
